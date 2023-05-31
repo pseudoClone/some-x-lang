@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 		"john_name string = \"John MacAfee\";\n"
 		"john_age int = 29;\n"
 		"print(\"The name is:\", prince);"
-		"print(\"The age is: @i\", john_age); #This is single line comment!"
+		"print(\"The age is: @i\", john_age); #This is single line comment!\n"
 		);
 	token_t* token = (void*)0;
 	while((token = lexer_get_next_token(lexer)) != (void*)0) /* (void*)0

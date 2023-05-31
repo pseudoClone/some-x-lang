@@ -6,7 +6,7 @@ lexer_t* init_lexer(char* content){
 	lexer_t* lexer = calloc(1, sizeof(lexer_t));
 	lexer -> content = content;
 	lexer -> i = 0;
-	lexer -> c = content[lexer -> i]; /* Basically 0, want to know more
+	lexer -> c = content[lexer -> i]; /* Basically 0, I want to know more
 					     about non-zero cases*/
 	return lexer;
 }
@@ -30,7 +30,13 @@ void lexer_skip_singleline_comment(lexer_t* lexer) {
 		lexer_advance(lexer);
 }
 /* void lexer_skip_multiline_comment(lexer_t* lexer) { */
-/* 	while(lexer -> c != '#' && if()) */
+/* 	while(lexer -> c != '#') { */
+/* 	  token_t* token; */
+/* 	  token_t* checkValue = lexer_advance_with_token(lexer, token); */
+/* 	  if((checkValue -> c == '#'){ */
+/* 	    lexer_advance(lexer); */
+/* 	      } */
+/* 	} */
 /* } */
 
 /* Helper function to return the token after we jump to next token */
