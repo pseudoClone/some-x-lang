@@ -81,6 +81,31 @@ token_t* lexer_get_next_token(lexer_t* lexer){
 							init_token(TOKEN_COMMA,
 								   lexer_get_current_char_as_string(lexer)));
 			break;
+			case '%':
+			return lexer_advance_with_token(lexer,
+							init_token(TOKEN_MODULO,
+								   lexer_get_current_char_as_string(lexer)));
+			break;
+			case '+':
+			return lexer_advance_with_token(lexer,
+							init_token(TOKEN_PLUS,
+								   lexer_get_current_char_as_string(lexer)));
+			break;
+			case '-':
+			return lexer_advance_with_token(lexer,
+							init_token(TOKEN_MINUS,
+								   lexer_get_current_char_as_string(lexer)));
+			break;
+			case '*':
+			return lexer_advance_with_token(lexer,
+							init_token(TOKEN_MUL,
+								   lexer_get_current_char_as_string(lexer)));
+			break;
+			case '/':
+			return lexer_advance_with_token(lexer,
+							init_token(TOKEN_DIV,
+								   lexer_get_current_char_as_string(lexer)));
+			break;
 		default:
 			break;
 		}
