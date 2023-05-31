@@ -1,0 +1,11 @@
+main int(){
+	john_age int = 29;
+	john_name string = "John MacAfee";
+
+	print("The name is:", prince);
+
+	print("The age is: @i", john_age); #This is single line comment!
+	print("The name is: @s", john_name); ## This is a multiline comment
+	 	     	    	 	     Here is the second line ##
+}
+
