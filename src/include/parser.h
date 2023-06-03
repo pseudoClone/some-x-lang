@@ -3,6 +3,7 @@
 #include "lexer.h"
 #include "ast.h"
 
+
 typedef struct PARSER_STRUCT{
 	lexer_t* lexer;
 	token_t* cur_token;
@@ -19,9 +20,9 @@ void eat_parser(parser_t* parser, int tok_type);
 /* Returns the whole AST of the source code. VVI func */
 ast_t* parser_parse(parser_t* parser);
 
-ast* parser_parse_statement(parser_t* parser);
+ast_t* parser_parse_statement(parser_t* parser);
 
-ast* parser_parse_statements(parser_t* parser);
+ast_t* parser_parse_statements(parser_t* parser);
 
 ast_t* parser_parse_term(parser_t* parser); /* Parses addition statments */
 
@@ -31,6 +32,10 @@ ast_t* parser_parse_factor(parser_t* parser); /* Parses muliplicative
 ast_t* parser_parse_expr(parser_t* parser); /* Combination of factor and
 					     terms functions*/
 
+ast_t* parser_parse_func_call(parser_t* parser);
 
+ast_t* parser_parse_var(parser_t* parser);
+
+ast_t* parser_parse_string(parser_t* parser);
 
 #endif /* PARSER_H */
